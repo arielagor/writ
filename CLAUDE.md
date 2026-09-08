@@ -17,18 +17,38 @@ harness, and an auditor evidence export. Prototype. Not launched.
 npm run typecheck        # tsc --noEmit (check the real exit status)
 npm test                 # node --import tsx --test "test/**/*.test.ts"
 npm run remit -- compile examples/blog-publisher.yaml --target all --out out/blog-publisher
+npm run probe -- examples/blog-publisher.yaml   # every case through the real hook; exit 0 only on PROBE OK
+npm run verify -- --chain data/chain.jsonl      # 0 verified, 2 broken (first bad seq named), 1 unreadable
+npm run hook:selftest                           # one allow + one deny through hooks/remit-gate.mjs
+npm run build            # dist/; the hook prefers dist/ when present. Rebuild after touching src/.
 npm run golden:update    # regenerate test/golden from the example manifests (review the diff)
 ```
 
 ## Layout
 
 - `schema/manifest.schema.json`: the purpose manifest contract.
+- `src/paths.ts`: repository-root resolution that works from `src/` and from `dist/`.
 - `src/manifest.ts`: load, validate, default, and version a manifest.
 - `src/compile/cedar.ts`: manifest to a named Cedar policy set.
 - `src/compile/claude-code.ts`: manifest to a Claude Code `settings.json` fragment.
 - `src/authorize.ts`: the one authorization call every enforcement point uses. Fails closed.
-- `bin/remit.ts`: the CLI.
+- `src/chain/`: the audit chain (`index.ts` append and verify, `keys.ts` ed25519, `lock.ts` the
+  O_EXCL advisory lock). `appendRecord` is the only writer; the broker imports it too.
+- `src/gate/decide.ts`: the hook's decision logic, one pure function. `hooks/remit-gate.mjs` is
+  the plain-JS entry Claude Code runs; it loads dist/ or src/ (never both).
+- `src/probe/`: case generation (`cases.ts`) and the runner that spawns the real hook (`run.ts`).
+- `bin/remit.ts`: the CLI (`check`, `compile`, `authorize`, `verify`, `probe`).
+- `examples/`: neutral-path fixtures. Dogfood manifests with real paths go in `local/` (gitignored).
+- `.github/workflows/ci.yml`: typecheck, tests, build, then self-test and both probes against dist/.
 - `docs/decisions/`: one dated record per decision. Read the latest before changing the model.
+
+## Runtime notes
+
+- `REMIT_MANIFEST` and `REMIT_CHAIN` are the hook's fallbacks for `--manifest` and `--chain`.
+- `REMIT_HOOK_PREFER=src` forces the hook to load TypeScript sources through tsx. The test
+  suite sets it so a stale local `dist/` cannot poison a run; CI proves `dist/` separately.
+- The chain and its keys live under `data/` (gitignored). Never commit a chain or a key.
+- The chain records paths and hashes of arguments, never argument values. Keep it that way.
 
 ## Hard rules
 

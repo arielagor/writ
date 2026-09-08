@@ -5,13 +5,18 @@
  *   remit check <manifest>
  *   remit compile <manifest> [--target cedar|claude-code|all] [--out <dir>] [--hook-command <cmd>]
  *   remit authorize <manifest> --tool <name> [--arg key=value ...] [--path <p>] [--now <iso>]
+ *   remit verify [--chain <path>] [--pubkey <path>]
+ *   remit probe <manifest> [--chain <path>] [--json]
  *
- * Exit codes: 0 ok / allow, 2 deny, 1 error or invalid manifest.
+ * Exit codes: 0 ok / allow / chain verified / probe passed, 2 deny / chain broken / probe failed,
+ * 1 error or invalid manifest.
  */
 
 import { authorize } from "../src/authorize.js";
+import { resolveChainPath, verifyChain } from "../src/chain/index.js";
 import { compileManifest, isTarget, renderOutputs, writeOutputs, type Target } from "../src/compile/index.js";
 import { loadManifest, ManifestError, manifestVersion } from "../src/manifest.js";
+import { formatProbeTable, runProbe, type ProbeOptions } from "../src/probe/run.js";
 
 interface Parsed {
   command: string;
@@ -51,6 +56,8 @@ function usage(): never {
       "  remit check <manifest>",
       "  remit compile <manifest> [--target cedar|claude-code|all] [--out <dir>] [--hook-command <cmd>]",
       "  remit authorize <manifest> --tool <name> [--arg key=value ...] [--path <p>] [--now <iso>]",
+      "  remit verify [--chain <path>] [--pubkey <path>]",
+      "  remit probe <manifest> [--chain <path>] [--json]",
       "",
     ].join("\n"),
   );
@@ -61,10 +68,22 @@ function str(flag: string | string[] | true | undefined): string | undefined {
   return typeof flag === "string" ? flag : undefined;
 }
 
+function verifyCommand(flags: Parsed["flags"]): number {
+  const chainPath = resolveChainPath(str(flags["chain"]));
+  const pubkey = str(flags["pubkey"]);
+  const result = verifyChain(chainPath, pubkey !== undefined ? { publicKeyPath: pubkey } : {});
+  process.stdout.write(JSON.stringify(result, null, 2) + "\n");
+  if (result.ok) return 0;
+  return result.error !== null && result.records === 0 && result.first_bad_seq === null ? 1 : 2;
+}
+
 function main(argv: string[]): number {
   const { command, positional, flags } = parseArgs(argv);
+  if (!command) usage();
+  if (command === "verify") return verifyCommand(flags);
+
   const manifestPath = positional[0];
-  if (!command || !manifestPath) usage();
+  if (!manifestPath) usage();
 
   let manifest;
   try {
@@ -128,6 +147,19 @@ function main(argv: string[]): number {
     const decision = authorize(manifest, compiled, request);
     process.stdout.write(JSON.stringify(decision, null, 2) + "\n");
     return decision.decision === "allow" ? 0 : 2;
+  }
+
+  if (command === "probe") {
+    const opts: ProbeOptions = {};
+    const chain = str(flags["chain"]);
+    if (chain !== undefined) opts.chainPath = chain;
+    const result = runProbe(manifestPath, opts);
+    if (flags["json"] === true) {
+      process.stdout.write(JSON.stringify(result, null, 2) + "\n");
+    } else {
+      process.stdout.write(formatProbeTable(result) + "\n");
+    }
+    return result.ok ? 0 : 2;
   }
 
   usage();

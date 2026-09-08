@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Unit, chain, hook, and probe tests
+        run: npm test
+      - name: Build dist (the path the hook prefers on a fresh clone)
+        run: npm run build
+      - name: Hook self-test against the built dist
+        run: node hooks/remit-gate.mjs --self-test --manifest examples/gbrain-reader.yaml
+      - name: Probe blog-publisher through the real hook (fails on any missing deny)
+        run: node dist/bin/remit.js probe examples/blog-publisher.yaml
+      - name: Probe gbrain-reader through the real hook (fails on any missing deny)
+        run: node dist/bin/remit.js probe examples/gbrain-reader.yaml

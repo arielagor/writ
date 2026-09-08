@@ -9,14 +9,14 @@ import { decideAndRecord, hookResponse, identityOf, redactReasons } from "../src
 import type { Decision } from "../src/authorize.js";
 import { examplePath, NOW, ROOT } from "./helpers.js";
 
-const HOOK = join(ROOT, "hooks", "remit-gate.mjs");
+const HOOK = join(ROOT, "hooks", "writ-gate.mjs");
 const READER = examplePath("gbrain-reader");
 
 // Tests exercise the TypeScript sources. CI exercises the built dist/ in separate steps.
-process.env["REMIT_HOOK_PREFER"] = "src";
+process.env["WRIT_HOOK_PREFER"] = "src";
 
 function tempChain(): string {
-  return join(mkdtempSync(join(tmpdir(), "remit-hook-")), "chain.jsonl");
+  return join(mkdtempSync(join(tmpdir(), "writ-hook-")), "chain.jsonl");
 }
 
 interface HookRun {
@@ -31,7 +31,7 @@ function runHook(input: string | object, args: string[], env: Record<string, str
     input: typeof input === "string" ? input : JSON.stringify(input),
     encoding: "utf8",
     timeout: 90_000,
-    env: { ...process.env, REMIT_MANIFEST: "", REMIT_CHAIN: "", CLAUDE_AGENT_TYPE: "", ...env },
+    env: { ...process.env, WRIT_MANIFEST: "", WRIT_CHAIN: "", CLAUDE_AGENT_TYPE: "", ...env },
   });
   const stdout = proc.stdout ?? "";
   const deny = stdout.trim().length > 0 ? (JSON.parse(stdout) as HookRun["deny"]) : null;
@@ -109,7 +109,7 @@ test("hook fails closed: no manifest configured is a deny with an ERROR record a
 
 test("hook fails closed: an invalid manifest is a deny naming the validation error", () => {
   const chain = tempChain();
-  const bad = join(mkdtempSync(join(tmpdir(), "remit-badm-")), "bad.yaml");
+  const bad = join(mkdtempSync(join(tmpdir(), "writ-badm-")), "bad.yaml");
   writeFileSync(bad, readFileSync(READER, "utf8").replace(/^purpose: >-[\s\S]*?purpose_id:/m, "purpose_id:"), "utf8");
   const r = runHook(hookInput("mcp__gbrain__search", { query: "x" }), ["--manifest", bad, "--chain", chain]);
   assert.ok(r.deny);
@@ -128,7 +128,7 @@ test("hook fails closed: unparseable stdin is a deny with an ERROR record", () =
 });
 
 test("hook fails closed: an allow that cannot be recorded becomes a deny", () => {
-  const dir = mkdtempSync(join(tmpdir(), "remit-nochain-"));
+  const dir = mkdtempSync(join(tmpdir(), "writ-nochain-"));
   const blocker = join(dir, "not-a-directory");
   writeFileSync(blocker, "x", "utf8");
   const unwritable = join(blocker, "sub", "chain.jsonl");
@@ -139,7 +139,7 @@ test("hook fails closed: an allow that cannot be recorded becomes a deny", () =>
 });
 
 test("hook --self-test runs one allow and one deny through the same path and verifies the chain", () => {
-  const proc = spawnSync(process.execPath, [HOOK, "--self-test", "--manifest", READER], { encoding: "utf8", timeout: 90_000, env: { ...process.env, REMIT_HOOK_PREFER: "src" } });
+  const proc = spawnSync(process.execPath, [HOOK, "--self-test", "--manifest", READER], { encoding: "utf8", timeout: 90_000, env: { ...process.env, WRIT_HOOK_PREFER: "src" } });
   assert.equal(proc.status, 0, proc.stderr);
   const out = JSON.parse(proc.stdout) as { ok: boolean; allow: { decision: string }; deny: { decision: string }; chain_verify: { ok: boolean; records: number } };
   assert.equal(out.ok, true);

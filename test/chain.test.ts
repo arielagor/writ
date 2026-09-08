@@ -19,7 +19,7 @@ import { LockTimeoutError, withFileLock } from "../src/chain/lock.js";
 import { ROOT } from "./helpers.js";
 
 function freshChain(): string {
-  const dir = mkdtempSync(join(tmpdir(), "remit-chain-"));
+  const dir = mkdtempSync(join(tmpdir(), "writ-chain-"));
   return join(dir, "chain.jsonl");
 }
 

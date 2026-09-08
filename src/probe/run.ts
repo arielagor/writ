@@ -2,7 +2,7 @@
  * Probe runner: send every generated case through the real hook process and check the chain.
  *
  * The point of the probe is to prove the enforcement point, not the authorizer. So each case
- * is a fresh `node hooks/remit-gate.mjs` process fed the same JSON Claude Code would send, and
+ * is a fresh `node hooks/writ-gate.mjs` process fed the same JSON Claude Code would send, and
  * the assertion is on what the hook wrote to the chain, not on an in-process return value.
  * The run ends with `verifyChain`, so a probe that passes has also proven the chain holds.
  */
@@ -19,7 +19,7 @@ import { generateCases, type ProbeCase } from "./cases.js";
 export interface ProbeOptions {
   /** Chain to write to. Defaults to a fresh temporary chain that is removed afterwards. */
   chainPath?: string;
-  /** Hook script. Defaults to the bundled `hooks/remit-gate.mjs`. */
+  /** Hook script. Defaults to the bundled `hooks/writ-gate.mjs`. */
   hookPath?: string;
   /** Node binary. Defaults to the current one. */
   nodePath?: string;
@@ -72,10 +72,10 @@ function parseReply(stdout: string, stderr: string): HookReply {
 
 export function runProbe(manifestPath: string, opts: ProbeOptions = {}): ProbeResult {
   const manifest = loadManifest(manifestPath);
-  const hookPath = opts.hookPath ?? fromRoot("hooks", "remit-gate.mjs");
+  const hookPath = opts.hookPath ?? fromRoot("hooks", "writ-gate.mjs");
   const nodePath = opts.nodePath ?? process.execPath;
   const timeoutMs = opts.timeoutMs ?? 30_000;
-  const temp = opts.chainPath ? null : mkdtempSync(join(tmpdir(), "remit-probe-"));
+  const temp = opts.chainPath ? null : mkdtempSync(join(tmpdir(), "writ-probe-"));
   const chainPath = opts.chainPath ?? join(temp!, "chain.jsonl");
   const { cases, skipped } = generateCases(manifest);
 
@@ -93,7 +93,7 @@ export function runProbe(manifestPath: string, opts: ProbeOptions = {}): ProbeRe
       input: JSON.stringify(input),
       encoding: "utf8",
       timeout: timeoutMs,
-      env: { ...process.env, REMIT_MANIFEST: "", REMIT_CHAIN: "" },
+      env: { ...process.env, WRIT_MANIFEST: "", WRIT_CHAIN: "" },
     });
     const reply = parseReply(proc.stdout ?? "", proc.stderr ?? "");
     const records = readChain(chainPath).records;

@@ -1,7 +1,7 @@
 /**
  * Purpose manifest: load, validate, apply defaults, and version.
  *
- * The manifest is the source of truth. Everything else in Remit is compiled from it.
+ * The manifest is the source of truth. Everything else in Writ is compiled from it.
  * Validation is two layers: the JSON Schema (shape, patterns, ranges, the deny_by_default
  * literal) and semantic checks the schema cannot express (regexes compile, the expiry is in
  * the future, tool names are unique).

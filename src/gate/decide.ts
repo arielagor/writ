@@ -28,9 +28,9 @@ export interface HookInput {
 }
 
 export interface GateOptions {
-  /** Manifest path. Falls back to `REMIT_MANIFEST`. Missing means deny. */
+  /** Manifest path. Falls back to `WRIT_MANIFEST`. Missing means deny. */
   manifestPath?: string;
-  /** Chain path. Falls back to `REMIT_CHAIN` then `<repo>/data/chain.jsonl`. */
+  /** Chain path. Falls back to `WRIT_CHAIN` then `<repo>/data/chain.jsonl`. */
   chainPath?: string;
   /** The clock. Defaults to the real clock. */
   now?: Date;
@@ -106,7 +106,7 @@ type ManifestLoad =
 
 function loadForGate(path: string | undefined, now: Date): ManifestLoad {
   if (!path || path.length === 0) {
-    return { ok: false, code: "manifest-missing", reason: "no purpose manifest configured (pass --manifest or set REMIT_MANIFEST)" };
+    return { ok: false, code: "manifest-missing", reason: "no purpose manifest configured (pass --manifest or set WRIT_MANIFEST)" };
   }
   let manifest: PurposeManifest;
   try {
@@ -132,8 +132,8 @@ function loadForGate(path: string | undefined, now: Date): ManifestLoad {
 export function decideAndRecord(raw: string | HookInput, opts: GateOptions = {}): GateOutcome {
   const env = opts.env ?? process.env;
   const now = opts.now ?? new Date();
-  const manifestPath = opts.manifestPath ?? env["REMIT_MANIFEST"];
-  const chainOpts = { chainPath: opts.chainPath ?? env["REMIT_CHAIN"] ?? undefined, now };
+  const manifestPath = opts.manifestPath ?? env["WRIT_MANIFEST"];
+  const chainOpts = { chainPath: opts.chainPath ?? env["WRIT_CHAIN"] ?? undefined, now };
 
   const { input, error: inputError } = parseInput(raw);
   const identity = identityOf(input, env);

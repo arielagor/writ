@@ -6,7 +6,7 @@ import { loadManifest } from "../src/manifest.js";
 import { examplePath, NOW } from "./helpers.js";
 
 // Tests exercise the TypeScript sources. CI exercises the built dist/ in separate steps.
-process.env["REMIT_HOOK_PREFER"] = "src";
+process.env["WRIT_HOOK_PREFER"] = "src";
 
 test("generateCases: both examples yield in-purpose and out-of-purpose cases with nothing skipped", () => {
   for (const name of ["blog-publisher", "gbrain-reader"]) {

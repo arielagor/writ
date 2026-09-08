@@ -1,4 +1,4 @@
-// Remit policy set for agent blog-publisher, purpose agorme-blog-publish
+// Writ policy set for agent blog-publisher, purpose agorme-blog-publish
 // policy_version 6a5817b4e8cbf146e1552e2d526f25564d9b68e42620ec2663d0004bedc0a650
 // expires 2027-03-31T00:00:00.000Z
 // Generated from the purpose manifest. Edit the manifest, not this file.

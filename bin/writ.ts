@@ -1,12 +1,12 @@
 #!/usr/bin/env -S node --import tsx
 /**
- * remit CLI.
+ * writ CLI.
  *
- *   remit check <manifest>
- *   remit compile <manifest> [--target cedar|claude-code|all] [--out <dir>] [--hook-command <cmd>]
- *   remit authorize <manifest> --tool <name> [--arg key=value ...] [--path <p>] [--now <iso>]
- *   remit verify [--chain <path>] [--pubkey <path>]
- *   remit probe <manifest> [--chain <path>] [--json]
+ *   writ check <manifest>
+ *   writ compile <manifest> [--target cedar|claude-code|all] [--out <dir>] [--hook-command <cmd>]
+ *   writ authorize <manifest> --tool <name> [--arg key=value ...] [--path <p>] [--now <iso>]
+ *   writ verify [--chain <path>] [--pubkey <path>]
+ *   writ probe <manifest> [--chain <path>] [--json]
  *
  * Exit codes: 0 ok / allow / chain verified / probe passed, 2 deny / chain broken / probe failed,
  * 1 error or invalid manifest.
@@ -53,11 +53,11 @@ function usage(): never {
   process.stderr.write(
     [
       "usage:",
-      "  remit check <manifest>",
-      "  remit compile <manifest> [--target cedar|claude-code|all] [--out <dir>] [--hook-command <cmd>]",
-      "  remit authorize <manifest> --tool <name> [--arg key=value ...] [--path <p>] [--now <iso>]",
-      "  remit verify [--chain <path>] [--pubkey <path>]",
-      "  remit probe <manifest> [--chain <path>] [--json]",
+      "  writ check <manifest>",
+      "  writ compile <manifest> [--target cedar|claude-code|all] [--out <dir>] [--hook-command <cmd>]",
+      "  writ authorize <manifest> --tool <name> [--arg key=value ...] [--path <p>] [--now <iso>]",
+      "  writ verify [--chain <path>] [--pubkey <path>]",
+      "  writ probe <manifest> [--chain <path>] [--json]",
       "",
     ].join("\n"),
   );

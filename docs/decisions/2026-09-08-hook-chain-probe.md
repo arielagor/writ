@@ -4,7 +4,7 @@
 
 Three components land together because each is only meaningful with the other two:
 
-- `hooks/remit-gate.mjs` is the Claude Code `PreToolUse` enforcement point. It reads the hook
+- `hooks/writ-gate.mjs` is the Claude Code `PreToolUse` enforcement point. It reads the hook
   JSON on stdin, resolves the session's purpose manifest, calls the one authorizer, writes a chain
   record for every decision, and answers with the Claude Code deny contract or with silence.
 - `src/chain/` is the append-only, hash-linked, ed25519-signed JSONL audit chain, with a verifier
@@ -16,14 +16,14 @@ Three components land together because each is only meaningful with the other tw
 ## Fail-closed choices in the hook
 
 The author's earlier machine-wide gate fails open on an internal error and prints a `GATE-ERROR`
-line, because its job was to stop a small never-class without ever blocking normal work. Remit's
+line, because its job was to stop a small never-class without ever blocking normal work. Writ's
 gate is the delegation itself. If the delegation cannot be established or cannot be recorded, the
 call is denied. Each failure has its own code so an operator reading the chain can tell them apart:
 
 | Condition | Code | Chain record |
 |---|---|---|
 | stdin is not JSON or not an object | `input-unparseable` | ERROR, agent and purpose from the manifest if it loads, else `unresolved` |
-| no `--manifest` and no `REMIT_MANIFEST` | `manifest-missing` | ERROR, `unresolved` |
+| no `--manifest` and no `WRIT_MANIFEST` | `manifest-missing` | ERROR, `unresolved` |
 | manifest file unreadable | `manifest-unreadable` | ERROR, `unresolved` |
 | manifest fails validation (including expiry) | `manifest-invalid` | ERROR, `unresolved` |
 | hook input has no `tool_name` | `input-missing-tool` | ERROR |
@@ -79,7 +79,7 @@ at once are part of the test suite. This coordinates processes on one host only.
 ## Why the probe goes through the real hook process
 
 The probe exists to prove the enforcement point, not the authorizer, which the unit tests already
-cover. So every case is a fresh `node hooks/remit-gate.mjs` fed the same JSON Claude Code would
+cover. So every case is a fresh `node hooks/writ-gate.mjs` fed the same JSON Claude Code would
 send, and the assertion is on what landed in the chain. A probe that passes has demonstrated four
 things at once: the hook resolves the manifest, the authorizer denies what should be denied, the
 chain received a record for every call, and the chain verifies. CI runs it against the built
@@ -95,13 +95,13 @@ The hook is plain JavaScript so Claude Code can run it without a build step. It 
 TypeScript modules from `dist/` when a build exists and otherwise through `tsx`. The choice is
 made once, on the entry module, and applied to every load: mixing the two would load two copies
 of `manifest.ts` with two schema paths. A stale `dist/` from before a source change caused
-exactly that during development, so the test suite sets `REMIT_HOOK_PREFER=src` and CI proves
+exactly that during development, so the test suite sets `WRIT_HOOK_PREFER=src` and CI proves
 `dist/` separately after building it.
 
 ## Deferred
 
 - The MCP credential broker and the `credential_id` it fills (separate component, separate branch).
-- Evidence export (`remit evidence`), which reads this chain.
+- Evidence export (`writ evidence`), which reads this chain.
 - Cross-host attestation of the chain.
 - Expiry probes: the hook uses the real clock, so an expired-manifest deny is covered in-process
   (`decideAndRecord` with an injected clock) rather than through the probe.

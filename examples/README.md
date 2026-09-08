@@ -12,12 +12,12 @@ carry anyone's real directory layout.
 ## Dogfood manifests
 
 Manifests with real paths for a real machine belong in `local/`, which is gitignored. Point the
-hook at one of them with `--manifest local/<name>.yaml` (or `REMIT_MANIFEST`), and the probe
+hook at one of them with `--manifest local/<name>.yaml` (or `WRIT_MANIFEST`), and the probe
 harness at the same file. Nothing under `local/` is ever committed.
 
 ```
 mkdir local
 cp examples/blog-publisher.yaml local/blog-publisher.yaml
 # edit the path_prefixes to the real posts directory
-npm run remit -- probe local/blog-publisher.yaml
+npm run writ -- probe local/blog-publisher.yaml
 ```

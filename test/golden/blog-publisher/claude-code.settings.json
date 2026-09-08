@@ -22,7 +22,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node hooks/remit-gate.mjs --manifest \"examples/blog-publisher.yaml\"",
+            "command": "node hooks/writ-gate.mjs --manifest \"examples/blog-publisher.yaml\"",
             "timeout": 10
           }
         ]

@@ -22,8 +22,8 @@ jobs:
       - name: Build dist (the path the hook prefers on a fresh clone)
         run: npm run build
       - name: Hook self-test against the built dist
-        run: node hooks/remit-gate.mjs --self-test --manifest examples/gbrain-reader.yaml
+        run: node hooks/writ-gate.mjs --self-test --manifest examples/gbrain-reader.yaml
       - name: Probe blog-publisher through the real hook (fails on any missing deny)
-        run: node dist/bin/remit.js probe examples/blog-publisher.yaml
+        run: node dist/bin/writ.js probe examples/blog-publisher.yaml
       - name: Probe gbrain-reader through the real hook (fails on any missing deny)
-        run: node dist/bin/remit.js probe examples/gbrain-reader.yaml
+        run: node dist/bin/writ.js probe examples/gbrain-reader.yaml

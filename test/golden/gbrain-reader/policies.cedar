@@ -1,4 +1,4 @@
-// Remit policy set for agent gbrain-reader, purpose gbrain-read-only
+// Writ policy set for agent gbrain-reader, purpose gbrain-read-only
 // policy_version 59edfcb44d87d8bbcf9d8786fd7eab8c28366ad9c4b22cfa9b43d50be170e24c
 // expires 2026-12-31T23:59:59.000Z
 // Generated from the purpose manifest. Edit the manifest, not this file.

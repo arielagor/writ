@@ -67,7 +67,7 @@ export interface ChainRecord {
 }
 
 export interface AppendOptions {
-  /** Chain file. Defaults to `REMIT_CHAIN` or `<repo>/data/chain.jsonl`. */
+  /** Chain file. Defaults to `WRIT_CHAIN` or `<repo>/data/chain.jsonl`. */
   chainPath?: string;
   /** The clock. Defaults to the real clock. */
   now?: Date;
@@ -95,7 +95,7 @@ const HEX64 = /^[0-9a-f]{64}$/;
 
 export function resolveChainPath(explicit?: string): string {
   if (explicit && explicit.length > 0) return explicit;
-  const env = process.env["REMIT_CHAIN"];
+  const env = process.env["WRIT_CHAIN"];
   if (env && env.length > 0) return env;
   return fromRoot(DEFAULT_CHAIN_RELATIVE);
 }

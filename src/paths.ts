@@ -10,7 +10,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const PACKAGE_NAME = "remit-agent";
+const PACKAGE_NAME = "writ-cli";
 
 let cachedRoot: string | undefined;
 

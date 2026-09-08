@@ -13,7 +13,7 @@
  *
  * Cedar has no regular expressions. A regex constraint is evaluated by `authorize()` before
  * the engine runs and arrives as `context.arg_regex_ok`; the permit for that tool requires it.
- * See docs/decisions/2026-09-08-remit-foundation.md.
+ * See docs/decisions/2026-09-08-writ-foundation.md.
  */
 
 import * as cedar from "@cedar-policy/cedar-wasm/nodejs";
@@ -188,7 +188,7 @@ export function compileCedar(m: PurposeManifest): CedarPolicySet {
   }
 
   const header = [
-    `// Remit policy set for agent ${m.agent_id}, purpose ${m.purpose_id}`,
+    `// Writ policy set for agent ${m.agent_id}, purpose ${m.purpose_id}`,
     `// policy_version ${version}`,
     `// expires ${expiryLiteral(m)}`,
     "// Generated from the purpose manifest. Edit the manifest, not this file.",

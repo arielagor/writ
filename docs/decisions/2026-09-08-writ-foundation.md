@@ -1,4 +1,4 @@
-# 2026-09-08: Remit foundation, manifest to Cedar
+# 2026-09-08: Writ foundation, manifest to Cedar
 
 ## Decision
 
@@ -30,7 +30,7 @@ point is that the file itself states the posture.
 
 The author's existing machine-wide governance gate fails open on an internal error and prints a
 `GATE-ERROR` line. That was a deliberate choice for a gate whose purpose was to stop a small
-never-class without ever blocking normal work. Remit is the opposite kind of gate: it is the
+never-class without ever blocking normal work. Writ is the opposite kind of gate: it is the
 delegation itself, so an evaluation error means the delegation cannot be established, and the
 call is denied. `authorize()` returns `deny` with reason `evaluation-error` for a thrown
 exception, a `failure` answer from the engine, or any error entry in the diagnostics.

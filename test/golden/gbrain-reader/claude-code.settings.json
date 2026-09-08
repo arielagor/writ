@@ -24,7 +24,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node hooks/remit-gate.mjs --manifest \"examples/gbrain-reader.yaml\"",
+            "command": "node hooks/writ-gate.mjs --manifest \"examples/gbrain-reader.yaml\"",
             "timeout": 10
           }
         ]

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/arielagor/remit/schema/manifest.schema.json",
-  "title": "Remit purpose manifest",
+  "$id": "https://github.com/arielagor/writ/schema/manifest.schema.json",
+  "title": "Writ purpose manifest",
   "description": "One declared purpose for one agent: who owns it, what it is for, which tools it may call under which constraints, and when the delegation ends. Deny by default is a required literal.",
   "type": "object",
   "additionalProperties": false,

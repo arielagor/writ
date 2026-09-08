@@ -5,7 +5,7 @@
  * they cannot express "deny everything else". The fragment therefore does three things:
  *   1. allow rules for exactly the manifest's tools (and path scopes where given);
  *   2. deny rules for the sensitive built-in tools the manifest does not name;
- *   3. a PreToolUse hook on every tool (`.*`) that sends each call through the Remit gate,
+ *   3. a PreToolUse hook on every tool (`.*`) that sends each call through the Writ gate,
  *      which is where deny-by-default actually binds.
  *
  * The hook script itself ships in a later component; the registration is emitted now so the
@@ -58,7 +58,7 @@ export const SENSITIVE_TOOLS: readonly string[] = [
 ];
 
 export function defaultHookCommand(manifestPath: string): string {
-  return `node hooks/remit-gate.mjs --manifest "${normalizePath(manifestPath)}"`;
+  return `node hooks/writ-gate.mjs --manifest "${normalizePath(manifestPath)}"`;
 }
 
 function allowRules(m: PurposeManifest): string[] {

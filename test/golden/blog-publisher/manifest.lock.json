@@ -1,12 +1,12 @@
 {
-  "policy_version": "f74bcee6f866def750be2ecfa1bb030512423832137a57748d4132db73568fff",
+  "policy_version": "6a5817b4e8cbf146e1552e2d526f25564d9b68e42620ec2663d0004bedc0a650",
   "manifest": {
     "agent_id": "blog-publisher",
     "allowed_tools": [
       {
         "constraints": {
           "path_prefixes": [
-            "C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/"
+            "/workspace/blog/posts/"
           ]
         },
         "name": "Write"
@@ -17,7 +17,7 @@
             "file_path": "\\.env"
           },
           "path_prefixes": [
-            "C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/"
+            "/workspace/blog/posts/"
           ]
         },
         "name": "Edit"

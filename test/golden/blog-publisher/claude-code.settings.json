@@ -1,8 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Write(C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/**)",
-      "Edit(C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/**)",
+      "Write(/workspace/blog/posts/**)",
+      "Edit(/workspace/blog/posts/**)",
       "mcp__gbrain__query"
     ],
     "deny": [

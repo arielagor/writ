@@ -9,9 +9,9 @@
 
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
-import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 import { Ajv2020, type ErrorObject, type ValidateFunction } from "ajv/dist/2020.js";
+import { fromRoot } from "./paths.js";
 
 export type ArgRule = string | string[];
 
@@ -57,7 +57,8 @@ export class ManifestError extends Error {
   }
 }
 
-const SCHEMA_PATH = fileURLToPath(new URL("../schema/manifest.schema.json", import.meta.url));
+/** Resolved through the repository root so it is correct from `src/` and from a built `dist/`. */
+const SCHEMA_PATH = fromRoot("schema", "manifest.schema.json");
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const DATE_TIME = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$/;
 

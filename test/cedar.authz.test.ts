@@ -10,7 +10,7 @@ const blogPolicies = compileCedar(blog);
 const reader = loadManifest(examplePath("gbrain-reader"), { now: NOW });
 const readerPolicies = compileCedar(reader);
 
-const POSTS = "C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/";
+const POSTS = "/workspace/blog/posts/";
 
 test("allow: Write under the allowed prefix, in purpose, before expiry", () => {
   const d = authorize(blog, blogPolicies, { tool: "Write", args: { file_path: `${POSTS}2026-09-09-post.mdx` }, now: NOW });
@@ -21,15 +21,15 @@ test("allow: Write under the allowed prefix, in purpose, before expiry", () => {
 });
 
 test("deny: Write outside the allowed prefix", () => {
-  const d = authorize(blog, blogPolicies, { tool: "Write", args: { file_path: "C:/Users/ariel/.claude/settings.json" }, now: NOW });
+  const d = authorize(blog, blogPolicies, { tool: "Write", args: { file_path: "/workspace/settings.json" }, now: NOW });
   assert.equal(d.decision, "deny");
   assert.deepEqual(d.reasons, []);
 });
 
 test("deny: a backslash path is normalized before matching, so the prefix still applies", () => {
-  const inside = authorize(blog, blogPolicies, { tool: "Write", args: { file_path: `C:\\Users\\ariel\\.claude\\projects\\agor.me\\src\\app\\blog\\posts\\x.mdx` }, now: NOW });
+  const inside = authorize(blog, blogPolicies, { tool: "Write", args: { file_path: `\\workspace\\blog\\posts\\x.mdx` }, now: NOW });
   assert.equal(inside.decision, "allow");
-  const outside = authorize(blog, blogPolicies, { tool: "Write", args: { file_path: `C:\\Users\\ariel\\.claude\\hooks\\x.mjs` }, now: NOW });
+  const outside = authorize(blog, blogPolicies, { tool: "Write", args: { file_path: `\\workspace\\hooks\\x.mjs` }, now: NOW });
   assert.equal(outside.decision, "deny");
 });
 

@@ -1,0 +1,39 @@
+# Purpose manifest: an agent that publishes blog posts for agor.me and nothing else.
+#
+# It may write and edit files under the posts directory and query the knowledge brain
+# for sources. It has no shell, no network, and no other paths. Anything not listed
+# here is denied.
+
+agent_id: blog-publisher
+owner:
+  name: Ariel Agor
+  email: ariel@agor.me
+purpose: >-
+  Write and edit blog post files under the agor.me posts directory, and query the
+  knowledge brain for sources. No shell, no network, no other paths.
+purpose_id: agorme-blog-publish
+
+allowed_tools:
+  - name: Write
+    constraints:
+      path_prefixes:
+        - C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/
+  - name: Edit
+    constraints:
+      path_prefixes:
+        - C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/
+      # Regular expression: never touch an env file, even under the allowed prefix.
+      arg_deny:
+        file_path: '\.env'
+  - name: mcp__gbrain__query
+    constraints:
+      # Exact-value allowlist: only the cheaper detail levels.
+      arg_allow:
+        detail: [low, medium]
+
+data_classes:
+  - public-content
+credential_ttl_seconds: 900
+expires_at: "2027-03-31T00:00:00Z"
+escalation_contact: ariel@agor.me
+deny_by_default: true

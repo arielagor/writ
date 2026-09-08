@@ -1,0 +1,35 @@
+# Purpose manifest: read-only research against the personal knowledge brain.
+#
+# Three MCP tools, all reads. It never writes a page, never adds a link or a tag, and
+# never touches the filesystem or the shell. Anything not listed here is denied.
+
+agent_id: gbrain-reader
+owner:
+  name: Ariel Agor
+  email: ariel@agor.me
+purpose: >-
+  Read-only research against the personal knowledge brain: semantic query, keyword
+  search, and fetching a page by slug. It never writes a page, never adds a link or a
+  tag, and never touches the filesystem or the shell.
+purpose_id: gbrain-read-only
+
+allowed_tools:
+  - name: mcp__gbrain__query
+    constraints:
+      # Regular expression: at most 50 results per query.
+      arg_allow:
+        limit: '^([1-9]|[1-4][0-9]|50)$'
+  - name: mcp__gbrain__search
+  - name: mcp__gbrain__get_page
+    constraints:
+      # Regular expression: never fetch pages filed under these prefixes.
+      arg_deny:
+        slug: '^(secrets|credentials)/'
+
+data_classes:
+  - personal-notes
+  - contacts
+credential_ttl_seconds: 600
+expires_at: "2026-12-31T23:59:59Z"
+escalation_contact: ariel@agor.me
+deny_by_default: true

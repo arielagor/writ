@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/arielagor/remit/schema/manifest.schema.json",
+  "title": "Remit purpose manifest",
+  "description": "One declared purpose for one agent: who owns it, what it is for, which tools it may call under which constraints, and when the delegation ends. Deny by default is a required literal.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "agent_id",
+    "owner",
+    "purpose",
+    "purpose_id",
+    "allowed_tools",
+    "expires_at",
+    "escalation_contact",
+    "deny_by_default"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "description": "Stable identifier of the agent. Becomes the Cedar principal Agent::\"<agent_id>\".",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,63}$"
+    },
+    "owner": {
+      "type": "object",
+      "description": "The accountable human. Every decision record names this owner.",
+      "additionalProperties": false,
+      "required": ["name", "email"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "email": { "type": "string", "format": "email" }
+      }
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Plain-language statement of what the agent is for. Read by humans and auditors; not parsed.",
+      "minLength": 10,
+      "maxLength": 2000
+    },
+    "purpose_id": {
+      "type": "string",
+      "description": "Slug for the purpose. Every compiled policy is annotated with it and every call carries it in context.",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,63}$"
+    },
+    "allowed_tools": {
+      "type": "array",
+      "description": "The only tools the agent may call. Anything not listed is denied.",
+      "minItems": 1,
+      "maxItems": 200,
+      "items": { "$ref": "#/$defs/allowedTool" }
+    },
+    "data_classes": {
+      "type": "array",
+      "description": "Labels for the data the agent is expected to touch. Informational today; the evidence export lists them.",
+      "default": [],
+      "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,63}$" },
+      "uniqueItems": true
+    },
+    "credential_ttl_seconds": {
+      "type": "integer",
+      "description": "Lifetime of any credential the broker mints for this agent. One hour by default, one day at most.",
+      "default": 3600,
+      "minimum": 60,
+      "maximum": 86400
+    },
+    "expires_at": {
+      "type": "string",
+      "description": "When the delegation ends. ISO 8601 date-time. Compiled into every policy; an expired manifest fails to load.",
+      "format": "date-time"
+    },
+    "escalation_contact": {
+      "type": "string",
+      "description": "Who is paged when the agent is denied and cannot proceed.",
+      "format": "email"
+    },
+    "deny_by_default": {
+      "const": true,
+      "description": "Must be literally true. The manifest states its own posture."
+    }
+  },
+  "$defs": {
+    "allowedTool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Tool name exactly as the runtime reports it, for example Write, Edit, Bash, or mcp__gbrain__query.",
+          "pattern": "^[A-Za-z][A-Za-z0-9_]{0,127}$"
+        },
+        "constraints": { "$ref": "#/$defs/toolConstraints" }
+      }
+    },
+    "toolConstraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "arg_allow": {
+          "type": "object",
+          "description": "Per-argument allow rule. An array is an exact-value allowlist; a string is a regular expression the value must match. The argument must be present.",
+          "additionalProperties": { "$ref": "#/$defs/argRule" }
+        },
+        "arg_deny": {
+          "type": "object",
+          "description": "Per-argument deny rule. An array is an exact-value denylist; a string is a regular expression the value must not match. An absent argument passes.",
+          "additionalProperties": { "$ref": "#/$defs/argRule" }
+        },
+        "path_prefixes": {
+          "type": "array",
+          "description": "The resource path must start with one of these prefixes. Forward slashes; a trailing slash means a directory.",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "argRule": {
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      ]
+    }
+  }
+}

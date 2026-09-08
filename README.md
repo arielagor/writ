@@ -1,6 +1,10 @@
 # Writ
 
-**Status: prototype, not launched.** Built in the open, on the author's own agent fleet first.
+[![CI](https://github.com/arielagor/writ/actions/workflows/ci.yml/badge.svg)](https://github.com/arielagor/writ/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+**Status: prototype, not launched.** No customers, no revenue. Built in the open, on the author's own
+agent fleet first.
 
 63% of organizations running AI agents in production cannot enforce purpose limitations on them
 (2026 governance survey, via Sennovate). They know what the agent is supposed to do. They cannot

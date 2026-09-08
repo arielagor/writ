@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Write(C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/**)",
+      "Edit(C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/**)",
+      "mcp__gbrain__query"
+    ],
+    "deny": [
+      "Bash",
+      "PowerShell",
+      "MultiEdit",
+      "NotebookEdit",
+      "WebFetch",
+      "WebSearch",
+      "Agent"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node hooks/remit-gate.mjs --manifest \"examples/blog-publisher.yaml\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

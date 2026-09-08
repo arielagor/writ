@@ -1,0 +1,51 @@
+{
+  "policy_version": "f74bcee6f866def750be2ecfa1bb030512423832137a57748d4132db73568fff",
+  "manifest": {
+    "agent_id": "blog-publisher",
+    "allowed_tools": [
+      {
+        "constraints": {
+          "path_prefixes": [
+            "C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/"
+          ]
+        },
+        "name": "Write"
+      },
+      {
+        "constraints": {
+          "arg_deny": {
+            "file_path": "\\.env"
+          },
+          "path_prefixes": [
+            "C:/Users/ariel/.claude/projects/agor.me/src/app/blog/posts/"
+          ]
+        },
+        "name": "Edit"
+      },
+      {
+        "constraints": {
+          "arg_allow": {
+            "detail": [
+              "low",
+              "medium"
+            ]
+          }
+        },
+        "name": "mcp__gbrain__query"
+      }
+    ],
+    "credential_ttl_seconds": 900,
+    "data_classes": [
+      "public-content"
+    ],
+    "deny_by_default": true,
+    "escalation_contact": "ariel@agor.me",
+    "expires_at": "2027-03-31T00:00:00Z",
+    "owner": {
+      "email": "ariel@agor.me",
+      "name": "Ariel Agor"
+    },
+    "purpose": "Write and edit blog post files under the agor.me posts directory, and query the knowledge brain for sources. No shell, no network, no other paths.",
+    "purpose_id": "agorme-blog-publish"
+  }
+}

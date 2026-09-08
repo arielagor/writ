@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__gbrain__query",
+      "mcp__gbrain__search",
+      "mcp__gbrain__get_page"
+    ],
+    "deny": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "MultiEdit",
+      "NotebookEdit",
+      "WebFetch",
+      "WebSearch",
+      "Agent"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node hooks/remit-gate.mjs --manifest \"examples/gbrain-reader.yaml\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

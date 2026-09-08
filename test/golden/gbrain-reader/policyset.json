@@ -1,0 +1,17 @@
+{
+  "agent_id": "gbrain-reader",
+  "purpose_id": "gbrain-read-only",
+  "policy_version": "59edfcb44d87d8bbcf9d8786fd7eab8c28366ad9c4b22cfa9b43d50be170e24c",
+  "expires_at": "2026-12-31T23:59:59.000Z",
+  "regex_tools": [
+    "mcp__gbrain__query",
+    "mcp__gbrain__get_page"
+  ],
+  "policies": {
+    "gbrain-read-only.mcp__gbrain__query": "@id(\"gbrain-read-only.mcp__gbrain__query\")\n@purpose_id(\"gbrain-read-only\")\n@policy_version(\"59edfcb44d87d8bbcf9d8786fd7eab8c28366ad9c4b22cfa9b43d50be170e24c\")\n@tool(\"mcp__gbrain__query\")\npermit(\n  principal == Agent::\"gbrain-reader\",\n  action == Action::\"mcp__gbrain__query\",\n  resource\n)\nwhen {\n  context.purpose_id == \"gbrain-read-only\" &&\n  context.now < datetime(\"2026-12-31T23:59:59.000Z\") &&\n  context.arg_regex_ok == true\n};",
+    "gbrain-read-only.mcp__gbrain__search": "@id(\"gbrain-read-only.mcp__gbrain__search\")\n@purpose_id(\"gbrain-read-only\")\n@policy_version(\"59edfcb44d87d8bbcf9d8786fd7eab8c28366ad9c4b22cfa9b43d50be170e24c\")\n@tool(\"mcp__gbrain__search\")\npermit(\n  principal == Agent::\"gbrain-reader\",\n  action == Action::\"mcp__gbrain__search\",\n  resource\n)\nwhen {\n  context.purpose_id == \"gbrain-read-only\" &&\n  context.now < datetime(\"2026-12-31T23:59:59.000Z\")\n};",
+    "gbrain-read-only.mcp__gbrain__get_page": "@id(\"gbrain-read-only.mcp__gbrain__get_page\")\n@purpose_id(\"gbrain-read-only\")\n@policy_version(\"59edfcb44d87d8bbcf9d8786fd7eab8c28366ad9c4b22cfa9b43d50be170e24c\")\n@tool(\"mcp__gbrain__get_page\")\npermit(\n  principal == Agent::\"gbrain-reader\",\n  action == Action::\"mcp__gbrain__get_page\",\n  resource\n)\nwhen {\n  context.purpose_id == \"gbrain-read-only\" &&\n  context.now < datetime(\"2026-12-31T23:59:59.000Z\") &&\n  context.arg_regex_ok == true\n};",
+    "gbrain-read-only.purpose-mismatch": "@id(\"gbrain-read-only.purpose-mismatch\")\n@purpose_id(\"gbrain-read-only\")\n@policy_version(\"59edfcb44d87d8bbcf9d8786fd7eab8c28366ad9c4b22cfa9b43d50be170e24c\")\nforbid(\n  principal == Agent::\"gbrain-reader\",\n  action,\n  resource\n)\nunless {\n  context.purpose_id == \"gbrain-read-only\"\n};",
+    "gbrain-read-only.expired": "@id(\"gbrain-read-only.expired\")\n@purpose_id(\"gbrain-read-only\")\n@policy_version(\"59edfcb44d87d8bbcf9d8786fd7eab8c28366ad9c4b22cfa9b43d50be170e24c\")\nforbid(\n  principal == Agent::\"gbrain-reader\",\n  action,\n  resource\n)\nwhen {\n  context.now >= datetime(\"2026-12-31T23:59:59.000Z\")\n};"
+  }
+}

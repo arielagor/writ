@@ -1,4 +1,4 @@
-# samples/ — a real gate log, redacted
+# samples: a real gate log, redacted
 
 `gate-log-redacted.jsonl` is the audit log from four PreToolUse gates that have run on my own
 development machine since June 2026. It is the evidence behind the claim that these gates actually
@@ -29,16 +29,16 @@ Denials by gate: heredoc-authoring-gate 109, pivot-tripwire 26, commit-gate 21, 
 
 The four enforcing gates, and what each one refuses:
 
-- **governance-gate** — a hardcoded never-class (its own hook files, the governance directory, signing
+- **governance-gate**: a hardcoded never-class (its own hook files, the governance directory, signing
   keys, service-account JSON, env files) plus a global kill-switch file. Deny on match. Its records
   predate the `gate` field, so they appear here as `(unlabelled)` and are identifiable by their
   `never-class-*` rule names.
-- **commit-gate** — denies `git commit` when the repository's typecheck or tests fail. The `BYPASSED`
+- **commit-gate**: denies `git commit` when the repository's typecheck or tests fail. The `BYPASSED`
   rows are the deliberate, logged `GATE_ADMIN=1` escape hatch, which is the point: a bypass you can
   count is a bypass you can audit.
-- **heredoc-authoring-gate** — denies shell heredocs and quoted literals that author source or prose
+- **heredoc-authoring-gate**: denies shell heredocs and quoted literals that author source or prose
   files, because that path silently mangles backslashes and long text.
-- **pivot-tripwire** — denies work that reaches for a new credential or paid service before the
+- **pivot-tripwire**: denies work that reaches for a new credential or paid service before the
   zero-dependency path has been re-checked.
 
 The remaining `gate` values (`resume-context`, `assistant-trigger`, `goal-tracker`, `goal-stop`) are

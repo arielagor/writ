@@ -16,6 +16,33 @@ credential per call so the agent never holds a standing key, writes a hash-chain
 naming agent, purpose, tool, credential and policy, keeps probing with out-of-purpose calls so the
 limit is proven rather than assumed, and exports the evidence an EU AI Act auditor asks for.
 
+## Sixty seconds
+
+```
+npm ci
+npm run build
+node dist/bin/writ.js probe examples/blog-publisher.yaml
+```
+
+That last command derives in-purpose and out-of-purpose calls from the manifest, sends every one of
+them through the real enforcement hook as a separate process, and exits non-zero unless the allows
+were allowed, the denies were actually denied, and the audit chain verifies. The table it prints is
+further down.
+
+**Evidence, not assertion:** [`samples/`](samples/README.md) holds the real, redacted audit log from
+the gates that run on the author's own machine. 678 decisions between 2026-06-11 and 2026-09-08, 174
+of them denials. The reason that file is in this repository is in the next paragraph.
+
+## Why this exists
+
+The author built a 39-agent framework with a kill switch, circuit breakers and confidence gates, then
+read its audit log: 401 decisions, every one attributed to `"agent":"unknown"`, and not a single block
+in the framework's entire life. The gate resolved agent identity to unknown, and allowed on unknown.
+It was governance in every diagram and enforcement in none.
+
+So the rule here is that a guardrail is not proven by its tests. It is proven by a real blocked event
+in a log. That is why the probe harness runs in CI, why the chain is signed, and why the log ships.
+
 ## What exists today
 
 - **Purpose manifest** (`schema/manifest.schema.json`, `examples/`): agent, owner, purpose,
@@ -75,7 +102,28 @@ Hook contract, for anyone wiring it elsewhere: stdin is the Claude Code `PreTool
 `{"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"<purpose id>: <reason>"}}`;
 on allow stdout is empty; exit code is 0 either way.
 
-What a probe run looks like (this is the actual output for `examples/gbrain-reader.yaml`):
+What a probe run looks like. This is the actual table from
+`node dist/bin/writ.js probe examples/blog-publisher.yaml`, with only the header line naming the
+absolute hook path removed:
+
+```
+#       expect got       seq  tool                   call                                           why
+ in-1   ALLOW  ALLOW     1    Write                  file_path=/workspace/blog/posts/probe.mdx      allowed tool, every constraint satisfied
+ out-2  DENY   DENY      2    Write                  file_path=/outside-the-purpose/probe.txt       path outside every allowed prefix
+ in-3   ALLOW  ALLOW     3    Edit                   file_path=/workspace/blog/posts/probe.mdx      allowed tool, every constraint satisfied
+ out-4  DENY   DENY      4    Edit                   file_path=/outside-the-purpose/probe.txt       path outside every allowed prefix
+ out-5  DENY   DENY      5    Edit                   file_path=/workspace/blog/posts/.env           argument file_path hits arg_deny
+ in-6   ALLOW  ALLOW     6    mcp__gbrain__query     detail=low                                     allowed tool, every constraint satisfied
+ out-7  DENY   DENY      7    mcp__gbrain__query     detail=999999                                  argument detail misses arg_allow
+ out-8  DENY   DENY      8    mcp__gbrain__put_page                                                 tool not named by the manifest
+ out-9  DENY   DENY      9    Bash                   command=echo probe                             sensitive built-in not named by the manifest
+ out-10 DENY   DENY      10   WebFetch               url=https://example.com/                       sensitive built-in not named by the manifest
+ out-11 DENY   DENY      11   Agent                                                                 sensitive built-in not named by the manifest
+allow 3/3, deny 8/8, chain verified (11 records)
+PROBE OK
+```
+
+And the same run for `examples/gbrain-reader.yaml`:
 
 ```
 #       expect got       seq  tool                   call                     why

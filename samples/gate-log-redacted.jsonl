@@ -1,0 +1,678 @@
+{"ts":"2026-06-11T21:41:02.415Z","outcome":"GATE-ERROR","event":"GATE-ERROR","error":"redacted-error"}
+{"ts":"2026-06-11T21:41:02.546Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=rm len=56>"}
+{"ts":"2026-06-11T21:41:02.972Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings","tool":"Write","identity":"main","path":"<source.json depth=5>"}
+{"ts":"2026-06-11T21:41:03.111Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=printenv len=27>"}
+{"ts":"2026-06-11T21:41:03.262Z","outcome":"GATE-ERROR","event":"GATE-ERROR","error":"redacted-error"}
+{"ts":"2026-06-11T21:41:03.387Z","outcome":"GATE-ERROR","event":"GATE-ERROR","error":"redacted-error"}
+{"ts":"2026-06-11T21:41:03.653Z","outcome":"ASKED","event":"ASK","rule":"multi-secret-network","tool":"Bash","identity":"main","command":"<command verb=curl len=76>"}
+{"ts":"2026-06-11T21:42:55.630Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-path","tool":"Write","identity":"main","path":"<signing-key depth=6>"}
+{"ts":"2026-06-11T21:42:55.853Z","outcome":"GATE-ERROR","event":"SELFTEST-FAIL"}
+{"ts":"2026-06-11T21:43:28.897Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings","tool":"Edit","identity":"main","path":"<source.json depth=5>"}
+{"ts":"2026-06-11T21:43:55.702Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<hook-source depth=6>","command":"<command verb=node len=300>"}
+{"ts":"2026-06-11T21:45:07.771Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=rm len=56>"}
+{"ts":"2026-06-11T21:45:51.241Z","outcome":"GATE-ERROR","event":"SELFTEST-FAIL"}
+{"ts":"2026-06-11T21:46:19.445Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=cd len=300>"}
+{"ts":"2026-06-11T21:48:30.707Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=printf len=53>"}
+{"ts":"2026-06-11T21:48:30.830Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=echo len=58>"}
+{"ts":"2026-06-11T21:49:02.264Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=printf len=55>"}
+{"ts":"2026-06-12T05:24:59.371Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-credential-basename","tool":"Bash","identity":"main","command":"<command verb=rm len=29>"}
+{"ts":"2026-06-12T05:24:59.477Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-credential-basename","tool":"Bash","identity":"main","command":"<command verb=rm len=15>"}
+{"ts":"2026-06-12T05:24:59.705Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=rm len=56>"}
+{"ts":"2026-06-12T05:44:58.782Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=printf len=53>"}
+{"ts":"2026-06-12T08:06:22.984Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=cd len=300>"}
+{"ts":"2026-06-12T17:11:42.096Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings","tool":"Edit","identity":"main","path":"<source.json depth=5>"}
+{"ts":"2026-06-16T07:13:21.360Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"Explore","command":"<command verb=cd len=105>"}
+{"ts":"2026-06-17T19:41:45.224Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=SESS len=300>"}
+{"ts":"2026-06-20T15:17:56.613Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=cd len=300>"}
+{"ts":"2026-06-23T17:22:42.261Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"image-generator","command":"<command verb=env len=98>"}
+{"ts":"2026-06-24T01:31:40.349Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"image-generator","command":"<command verb=env len=222>"}
+{"ts":"2026-06-24T02:07:40.451Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"image-generator","command":"<command verb=ls len=297>"}
+{"ts":"2026-06-25T06:02:59.219Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"image-generator","command":"<command verb=env len=78>"}
+{"ts":"2026-06-26T16:01:47.219Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=cd len=300>"}
+{"ts":"2026-06-26T21:52:08.662Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings","tool":"Edit","identity":"main","path":"<source.json depth=5>"}
+{"ts":"2026-06-30T06:45:28.310Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=git len=300>"}
+{"ts":"2026-07-04T01:42:27.882Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=printenv len=300>"}
+{"ts":"2026-07-10T17:07:24.350Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=echo len=300>"}
+{"ts":"2026-07-11T01:02:08.617Z","outcome":"DENIED","event":"BLOCK","rule":"bare-gbrain-command","tool":"Bash","identity":"main","command":"<command verb=gbrain len=12>"}
+{"ts":"2026-07-11T01:03:20.080Z","outcome":"DENIED","event":"BLOCK","rule":"bare-gbrain-command","tool":"Bash","identity":"main","command":"<command verb=gbrain len=12>"}
+{"ts":"2026-07-12T01:15:49.242Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=Get-ChildItem len=109>"}
+{"ts":"2026-07-12T04:48:43.127Z","outcome":"DENIED","event":"BLOCK","rule":"bare-gbrain-command","tool":"Bash","identity":"main","command":"<command verb=gbrain len=16>"}
+{"ts":"2026-07-12T09:19:58.986Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=? len=300>"}
+{"ts":"2026-07-12T09:21:25.500Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=? len=300>"}
+{"ts":"2026-07-13T11:23:35.049Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=Get-ChildItem len=300>"}
+{"ts":"2026-07-13T11:27:25.736Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"default","command":"<command verb=? len=300>"}
+{"ts":"2026-07-13T22:05:25.879Z","outcome":"DENIED","event":"BLOCK","rule":"personal-gbrain-path","tool":"Bash","identity":"default","command":"<command verb=rg len=253>"}
+{"ts":"2026-07-13T22:26:57.724Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"default","command":"<command verb=Get-ChildItem len=127>"}
+{"ts":"2026-07-14T06:59:45.832Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings","tool":"Edit","identity":"main","path":"<source.json depth=5>"}
+{"ts":"2026-07-15T13:02:41.655Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"default","command":"<command verb=Get-Content len=199>"}
+{"ts":"2026-07-16T07:53:26.307Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=? len=300>"}
+{"ts":"2026-07-16T07:54:12.162Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=? len=300>"}
+{"ts":"2026-07-16T07:58:56.964Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings-bash","tool":"Bash","identity":"main","command":"<command verb=cp len=300>"}
+{"ts":"2026-07-16T11:53:26.306Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=? len=300>"}
+{"ts":"2026-07-24T17:27:37.518Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings","tool":"Edit","identity":"main","path":"<source.json depth=5>"}
+{"ts":"2026-07-24T18:04:49.704Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings","tool":"Edit","identity":"main","path":"<source.json depth=5>"}
+{"ts":"2026-07-24T18:48:11.047Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=env len=218>"}
+{"ts":"2026-07-25T00:27:05.381Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=env len=130>"}
+{"ts":"2026-08-15T18:26:03.858Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=grep len=225>"}
+{"ts":"2026-08-23T20:35:08.857Z","outcome":"DENIED","event":"BLOCK","rule":"never-class-bash","tool":"Bash","identity":"main","path":"<governance-control depth=6>","command":"<command verb=SPW len=300>"}
+{"ts":"2026-08-23T20:35:50.038Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=SPW len=300>"}
+{"ts":"2026-08-23T20:53:54.633Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=SPW len=300>"}
+{"ts":"2026-08-23T20:54:44.865Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"main","command":"<command verb=SPW len=300>"}
+{"ts":"2026-08-23T21:18:14.141Z","outcome":"BYPASSED","event":"ADMIN-BYPASS","tool":"Bash","identity":"main"}
+{"ts":"2026-08-23T21:27:07.103Z","outcome":"ASKED","event":"ASK","rule":"sensitive-settings-bash","tool":"Bash","identity":"main","command":"<command verb=cd len=300>"}
+{"ts":"2026-08-24T21:19:46.748Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"Explore","command":"<command verb=echo len=300>"}
+{"ts":"2026-09-01T21:06:03.306Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=79>"}
+{"ts":"2026-09-01T21:06:03.379Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=28>"}
+{"ts":"2026-09-01T21:06:03.453Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=33>"}
+{"ts":"2026-09-01T21:06:03.531Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=29>"}
+{"ts":"2026-09-01T21:06:03.605Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=32>"}
+{"ts":"2026-09-01T21:06:03.700Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=49>"}
+{"ts":"2026-09-01T21:06:03.787Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=node len=29>"}
+{"ts":"2026-09-01T21:06:03.878Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=29>"}
+{"ts":"2026-09-01T21:06:04.110Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=48>"}
+{"ts":"2026-09-01T21:06:04.476Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=70>"}
+{"ts":"2026-09-01T21:06:04.585Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=ssh len=22>"}
+{"ts":"2026-09-01T21:06:05.053Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=psql len=48>"}
+{"ts":"2026-09-01T21:06:05.139Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=43>"}
+{"ts":"2026-09-01T21:06:42.765Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=151>"}
+{"ts":"2026-09-01T21:07:01.563Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-01T21:10:35.597Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-01T21:11:29.828Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=mkdir len=300>"}
+{"ts":"2026-09-01T21:12:06.925Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=79>"}
+{"ts":"2026-09-01T21:12:07.048Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=28>"}
+{"ts":"2026-09-01T21:12:07.156Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=33>"}
+{"ts":"2026-09-01T21:12:07.289Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=29>"}
+{"ts":"2026-09-01T21:12:07.403Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=32>"}
+{"ts":"2026-09-01T21:12:07.669Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=49>"}
+{"ts":"2026-09-01T21:12:07.770Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=node len=29>"}
+{"ts":"2026-09-01T21:12:07.967Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=29>"}
+{"ts":"2026-09-01T21:12:08.047Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=48>"}
+{"ts":"2026-09-01T21:12:08.236Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=70>"}
+{"ts":"2026-09-01T21:12:08.313Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=ssh len=22>"}
+{"ts":"2026-09-01T21:12:09.112Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=psql len=48>"}
+{"ts":"2026-09-01T21:12:09.193Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=43>"}
+{"ts":"2026-09-01T21:14:47.410Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=echo len=200>"}
+{"ts":"2026-09-01T21:15:06.351Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=200>"}
+{"ts":"2026-09-01T21:26:57.370Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-01T23:24:25.537Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-01T23:29:28.877Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-02T20:10:32.244Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-02T20:11:25.502Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-02T22:04:00.272Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-02T22:10:06.533Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-02T22:18:19.591Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-02T22:26:45.664Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-02T22:31:30.415Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=set len=300>"}
+{"ts":"2026-09-02T22:38:12.292Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-02T22:42:16.706Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-02T22:48:17.186Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-02T22:52:40.620Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-03T04:25:27.510Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-03T04:31:02.492Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-03T04:35:28.925Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=300>"}
+{"ts":"2026-09-03T04:43:33.794Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=set len=300>"}
+{"ts":"2026-09-03T10:54:35.579Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-03T18:30:38.564Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=30>"}
+{"ts":"2026-09-03T18:54:19.984Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-03T18:55:09.118Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-03T19:01:22.174Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-03T20:36:02.792Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-04T16:28:58.618Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=300>"}
+{"ts":"2026-09-04T17:20:46.424Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-04T23:00:25.842Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-05T19:35:35.647Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-06T08:04:43.101Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=252>"}
+{"ts":"2026-09-06T21:14:12.454Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=echo len=200>"}
+{"ts":"2026-09-06T21:14:32.474Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=echo len=200>"}
+{"ts":"2026-09-06T23:53:01.312Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-07T01:22:44.708Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-07T01:44:55.643Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-07T02:37:09.139Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=300>"}
+{"ts":"2026-09-07T02:48:04.168Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-07T02:59:59.083Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-07T03:14:45.186Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-07T03:24:12.197Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-07T06:51:16.462Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=for len=300>"}
+{"ts":"2026-09-07T10:18:32.100Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-07T10:34:31.706Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-07T11:45:34.817Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=200>"}
+{"ts":"2026-09-07T11:46:25.662Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=200>"}
+{"ts":"2026-09-07T11:53:29.072Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-07T11:59:02.480Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-07T12:33:51.843Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-07T12:38:41.971Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-07T14:26:44.627Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-07T19:52:33.398Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=54>"}
+{"ts":"2026-09-07T20:11:03.650Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=M len=300>"}
+{"ts":"2026-09-07T22:33:41.083Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=300>"}
+{"ts":"2026-09-07T22:39:47.563Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=79>"}
+{"ts":"2026-09-07T22:39:47.652Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=28>"}
+{"ts":"2026-09-07T22:39:47.748Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=33>"}
+{"ts":"2026-09-07T22:39:48.084Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=29>"}
+{"ts":"2026-09-07T22:39:48.797Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=32>"}
+{"ts":"2026-09-07T22:39:48.907Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=49>"}
+{"ts":"2026-09-07T22:39:49.015Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=node len=29>"}
+{"ts":"2026-09-07T22:39:49.111Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=29>"}
+{"ts":"2026-09-07T22:39:49.211Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=48>"}
+{"ts":"2026-09-07T22:39:49.544Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=70>"}
+{"ts":"2026-09-07T22:39:49.639Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=ssh len=22>"}
+{"ts":"2026-09-07T22:39:50.365Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=psql len=48>"}
+{"ts":"2026-09-07T22:39:50.781Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=43>"}
+{"ts":"2026-09-07T22:39:50.890Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=118>"}
+{"ts":"2026-09-07T22:39:50.973Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=44>"}
+{"ts":"2026-09-07T22:39:51.048Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=50>"}
+{"ts":"2026-09-07T22:39:51.133Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=26>"}
+{"ts":"2026-09-07T22:39:51.212Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=30>"}
+{"ts":"2026-09-07T22:39:51.305Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=130>"}
+{"ts":"2026-09-07T22:39:52.442Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=38>"}
+{"ts":"2026-09-07T22:40:07.380Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=148>"}
+{"ts":"2026-09-07T22:41:03.678Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=300>"}
+{"ts":"2026-09-07T22:47:04.418Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-07T22:55:11.094Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-07T22:59:58.094Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=79>"}
+{"ts":"2026-09-07T22:59:58.191Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=28>"}
+{"ts":"2026-09-07T22:59:58.294Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=33>"}
+{"ts":"2026-09-07T22:59:58.413Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=29>"}
+{"ts":"2026-09-07T22:59:58.548Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=32>"}
+{"ts":"2026-09-07T22:59:58.969Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=49>"}
+{"ts":"2026-09-07T23:00:00.166Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=node len=29>"}
+{"ts":"2026-09-07T23:00:00.271Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=29>"}
+{"ts":"2026-09-07T23:00:00.375Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=48>"}
+{"ts":"2026-09-07T23:00:00.473Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=70>"}
+{"ts":"2026-09-07T23:00:00.893Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=ssh len=22>"}
+{"ts":"2026-09-07T23:00:01.952Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=psql len=48>"}
+{"ts":"2026-09-07T23:00:03.121Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=43>"}
+{"ts":"2026-09-07T23:00:03.786Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=118>"}
+{"ts":"2026-09-07T23:00:03.917Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=44>"}
+{"ts":"2026-09-07T23:00:04.050Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=50>"}
+{"ts":"2026-09-07T23:00:04.196Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=26>"}
+{"ts":"2026-09-07T23:00:04.345Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=30>"}
+{"ts":"2026-09-07T23:00:04.485Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=130>"}
+{"ts":"2026-09-07T23:00:06.255Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=38>"}
+{"ts":"2026-09-08T01:21:38.214Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=79>"}
+{"ts":"2026-09-08T01:21:38.869Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=28>"}
+{"ts":"2026-09-08T01:21:38.935Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=33>"}
+{"ts":"2026-09-08T01:21:39.002Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=29>"}
+{"ts":"2026-09-08T01:21:39.071Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=32>"}
+{"ts":"2026-09-08T01:21:39.139Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=49>"}
+{"ts":"2026-09-08T01:21:39.206Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=node len=29>"}
+{"ts":"2026-09-08T01:21:39.277Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=29>"}
+{"ts":"2026-09-08T01:21:39.349Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=48>"}
+{"ts":"2026-09-08T01:21:39.416Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=70>"}
+{"ts":"2026-09-08T01:21:39.487Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=ssh len=22>"}
+{"ts":"2026-09-08T01:21:39.866Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=psql len=48>"}
+{"ts":"2026-09-08T01:21:39.937Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=43>"}
+{"ts":"2026-09-08T01:21:40.004Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=118>"}
+{"ts":"2026-09-08T01:21:40.075Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=44>"}
+{"ts":"2026-09-08T01:21:40.150Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=50>"}
+{"ts":"2026-09-08T01:21:40.218Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=26>"}
+{"ts":"2026-09-08T01:21:40.292Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=30>"}
+{"ts":"2026-09-08T01:21:40.365Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=130>"}
+{"ts":"2026-09-08T01:21:41.132Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=38>"}
+{"ts":"2026-09-08T01:47:40.542Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=SP len=300>"}
+{"ts":"2026-09-08T01:48:33.216Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=SP len=300>"}
+{"ts":"2026-09-08T10:06:43.077Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=gbrain len=300>"}
+{"ts":"2026-09-08T10:08:09.800Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=79>"}
+{"ts":"2026-09-08T10:08:10.062Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=28>"}
+{"ts":"2026-09-08T10:08:10.407Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=33>"}
+{"ts":"2026-09-08T10:08:11.141Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=29>"}
+{"ts":"2026-09-08T10:08:11.414Z","outcome":"DENIED","rule":"tee-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=tee len=32>"}
+{"ts":"2026-09-08T10:08:11.673Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=python len=49>"}
+{"ts":"2026-09-08T10:08:11.987Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=node len=29>"}
+{"ts":"2026-09-08T10:08:12.191Z","outcome":"DENIED","rule":"redirect-to-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cat len=29>"}
+{"ts":"2026-09-08T10:08:12.395Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=48>"}
+{"ts":"2026-09-08T10:08:12.574Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=docker len=70>"}
+{"ts":"2026-09-08T10:08:12.912Z","outcome":"ALLOWED","rule":"remote-stream","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=ssh len=22>"}
+{"ts":"2026-09-08T10:08:14.479Z","outcome":"ALLOWED","rule":"sql","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=psql len=48>"}
+{"ts":"2026-09-08T10:08:14.709Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=43>"}
+{"ts":"2026-09-08T10:08:14.916Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=118>"}
+{"ts":"2026-09-08T10:08:15.082Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=44>"}
+{"ts":"2026-09-08T10:08:15.245Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=50>"}
+{"ts":"2026-09-08T10:08:15.446Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=26>"}
+{"ts":"2026-09-08T10:08:15.633Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=30>"}
+{"ts":"2026-09-08T10:08:15.906Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=printf len=130>"}
+{"ts":"2026-09-08T10:08:18.852Z","outcome":"BYPASSED","decision":"bypass","gate":"heredoc-authoring-gate","command":"<command verb=HEREDOC_OK len=38>"}
+{"ts":"2026-09-08T10:08:19.993Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=npm len=80>"}
+{"ts":"2026-09-08T10:08:20.258Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=53>"}
+{"ts":"2026-09-08T10:08:20.667Z","outcome":"DENIED","rule":"shell-literal-authors-file","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=echo len=26>"}
+{"ts":"2026-09-08T10:19:03.566Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=cd len=200>"}
+{"ts":"2026-09-08T10:44:03.284Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-08T10:47:37.479Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=GATE_ADMIN len=200>"}
+{"ts":"2026-09-08T10:48:11.568Z","outcome":"ALLOWED","rule":"git-message","decision":"allow","gate":"heredoc-authoring-gate","command":"<command verb=git len=200>"}
+{"ts":"2026-09-08T20:53:43.856Z","outcome":"ASKED","event":"ASK","rule":"env-full-dump","tool":"Bash","identity":"Explore","command":"<command verb=ls len=152>"}
+{"ts":"2026-09-08T22:29:27.944Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-08T23:16:40.894Z","outcome":"DENIED","rule":"interpreter-source","decision":"deny","gate":"heredoc-authoring-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-08-23T19:58:40.224Z","outcome":"OTHER","gate":"assistant-trigger"}
+{"ts":"2026-08-23T19:58:40.290Z","outcome":"OTHER","gate":"assistant-trigger"}
+{"ts":"2026-08-23T19:58:40.357Z","outcome":"OTHER","gate":"assistant-trigger"}
+{"ts":"2026-08-23T19:58:40.409Z","outcome":"OTHER","gate":"assistant-trigger"}
+{"ts":"2026-08-23T19:58:40.513Z","outcome":"OTHER","gate":"assistant-trigger"}
+{"ts":"2026-08-23T19:58:40.569Z","outcome":"OTHER","gate":"assistant-trigger"}
+{"ts":"2026-08-23T19:58:40.621Z","outcome":"OTHER","gate":"assistant-trigger"}
+{"ts":"2026-08-23T19:59:25.284Z","outcome":"OTHER","gate":"assistant-trigger"}
+{"ts":"2026-07-16T07:56:01.555Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-07-16T07:56:02.145Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=36>"}
+{"ts":"2026-07-16T07:56:25.907Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T07:56:47.997Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-07-16T07:57:45.075Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-07-16T07:58:17.596Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T08:01:48.794Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T09:18:35.795Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T09:23:33.373Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T09:35:06.827Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T09:39:45.211Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T09:59:10.653Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T10:04:25.625Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T10:10:12.109Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-07-16T10:13:15.286Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T10:14:45.959Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T10:17:30.327Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T10:18:34.882Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T10:36:17.097Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-07-16T11:27:18.454Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T11:46:50.292Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T12:02:45.921Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T12:10:28.857Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T12:11:21.840Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T12:41:26.086Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-07-16T12:43:01.463Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T12:43:31.504Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-07-16T12:43:33.960Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T12:45:36.531Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-07-16T12:48:36.304Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T12:58:19.776Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T13:04:01.540Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T13:15:53.552Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T13:16:18.612Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T13:18:30.073Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-16T13:20:51.017Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-17T08:21:46.709Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-17T09:03:51.034Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-17T09:06:51.344Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T18:09:01.527Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=git len=300>"}
+{"ts":"2026-07-21T19:16:43.847Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T19:45:25.751Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T20:33:14.580Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T20:42:15.756Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T21:31:22.538Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T21:32:11.864Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T22:01:52.626Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T22:32:46.292Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T22:51:48.140Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T22:54:33.461Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T22:57:21.428Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-21T23:12:10.841Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-22T00:12:49.046Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-22T00:54:13.180Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-22T22:25:38.754Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-24T17:45:17.023Z","outcome":"GATE-ERROR","event":"GATE-ERROR","gate":"commit-gate"}
+{"ts":"2026-07-24T17:49:39.421Z","outcome":"GATE-ERROR","event":"GATE-ERROR","gate":"commit-gate"}
+{"ts":"2026-07-24T17:50:07.471Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-24T17:53:06.373Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-07-24T17:59:40.407Z","outcome":"GATE-ERROR","event":"GATE-ERROR","gate":"commit-gate"}
+{"ts":"2026-07-24T18:06:05.584Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-24T18:11:27.097Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-24T18:19:43.074Z","outcome":"GATE-ERROR","event":"GATE-ERROR","gate":"commit-gate"}
+{"ts":"2026-07-24T18:20:38.852Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-24T19:23:04.728Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-24T19:34:01.894Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-25T01:24:47.699Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-07-25T01:25:18.934Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=300>"}
+{"ts":"2026-07-25T01:25:45.233Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=300>"}
+{"ts":"2026-07-27T02:20:10.265Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-27T06:30:01.627Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-27T15:56:45.116Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-27T16:01:05.525Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-28T01:47:31.784Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-28T02:00:06.119Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-28T02:11:13.161Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-28T02:21:41.450Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-28T02:25:26.861Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-28T08:51:24.436Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-28T19:29:43.101Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-29T16:58:29.049Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-29T17:31:01.534Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-29T17:39:02.880Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-29T17:40:17.654Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-29T17:41:02.567Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-29T18:11:34.308Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-29T18:20:12.828Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-30T07:12:26.745Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-30T07:13:23.601Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-30T07:17:53.761Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-30T07:25:31.060Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-07-30T07:26:34.615Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-07-30T07:26:54.960Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-07-30T08:00:33.608Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-30T08:10:57.091Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-30T18:49:59.983Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-30T19:04:55.315Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-30T19:55:52.034Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-31T07:11:00.757Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-07-31T07:54:18.307Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-15T07:38:57.444Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-15T08:00:22.367Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-15T18:11:16.769Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-08-15T18:12:03.561Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-15T19:57:27.085Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-15T20:15:13.968Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-15T20:22:09.880Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-16T00:52:29.150Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-16T01:03:34.471Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-16T05:18:33.555Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-16T05:28:49.724Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-16T05:36:31.544Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-17T20:00:35.342Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-17T21:37:59.262Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-17T21:49:47.334Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-17T22:01:37.286Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-18T03:20:51.655Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-08-18T03:22:26.368Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=300>"}
+{"ts":"2026-08-18T03:23:10.239Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=300>"}
+{"ts":"2026-08-18T03:24:49.743Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-19T21:36:21.816Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-19T22:07:29.433Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-19T23:39:36.299Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-20T01:58:09.899Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-20T01:58:34.433Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-20T01:58:57.558Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-20T02:11:51.840Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T00:28:23.873Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T07:52:43.370Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T08:03:57.908Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T08:04:20.566Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T08:05:53.051Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T08:24:56.225Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T08:25:43.490Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T08:31:42.399Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T08:39:13.574Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T08:53:23.878Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T09:01:21.755Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T09:14:36.409Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T09:55:27.001Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T10:07:57.222Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T10:28:11.341Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T10:28:52.146Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T10:39:08.499Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T16:13:52.742Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T16:20:43.683Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=git len=300>"}
+{"ts":"2026-08-21T16:27:53.154Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T16:29:26.509Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T16:32:15.859Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-08-21T16:33:12.794Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=300>"}
+{"ts":"2026-08-21T17:26:27.409Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T17:35:36.034Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T17:39:44.609Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T17:40:28.695Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-21T19:24:24.859Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-08-22T02:09:05.399Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-08-22T03:23:55.628Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-08-23T19:03:22.845Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-08-23T19:11:19.192Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-23T19:17:23.964Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=101>"}
+{"ts":"2026-08-23T19:17:24.029Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=git len=135>"}
+{"ts":"2026-08-23T19:17:24.088Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=130>"}
+{"ts":"2026-08-23T19:17:54.888Z","outcome":"GATE-ERROR","event":"GATE-ERROR","gate":"commit-gate","error":"redacted-error"}
+{"ts":"2026-08-23T19:17:57.889Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-08-23T19:18:00.603Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-08-23T19:18:00.662Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=38>"}
+{"ts":"2026-08-23T19:18:24.142Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-23T19:19:55.229Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-23T20:05:48.761Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-23T20:12:10.147Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-23T20:25:47.216Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T21:45:18.530Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T22:00:27.679Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T22:33:08.497Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T22:34:04.683Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T22:44:45.349Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T22:48:47.131Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T23:00:10.959Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T23:00:24.211Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T23:09:05.099Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T23:55:21.613Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T23:56:05.975Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-24T23:56:35.052Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-25T00:31:06.597Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-25T00:40:06.794Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-25T01:11:29.083Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-25T01:36:48.312Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-25T01:55:05.683Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T16:49:15.499Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T17:49:27.520Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:00:40.361Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:07:02.630Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:10:44.466Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:11:59.083Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:16:19.835Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:20:47.571Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:21:15.519Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:23:15.074Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:26:42.691Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:31:20.857Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:40:08.991Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:53:24.012Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:55:08.186Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T18:57:59.551Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:10:58.563Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:15:19.481Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:17:33.284Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:19:57.171Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:23:09.761Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:26:35.910Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:27:07.943Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:27:50.789Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:29:15.513Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:30:43.415Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:31:26.959Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:34:27.244Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T19:39:09.387Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:09:15.258Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:18:58.177Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:19:08.436Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:23:28.957Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:24:48.460Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:31:19.263Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:36:46.674Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:37:01.923Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:37:53.767Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:40:23.563Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:42:54.016Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:43:46.310Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-28T20:46:07.151Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-29T15:05:45.282Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-29T15:06:13.144Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-29T22:05:25.620Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-29T22:24:13.409Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-30T22:38:08.486Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-30T23:28:07.974Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-30T23:43:24.208Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-30T23:48:46.155Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T00:20:25.748Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T17:47:46.425Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-08-31T17:48:27.339Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T17:50:09.850Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T18:03:07.893Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T18:10:09.369Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T18:53:04.081Z","outcome":"GATE-ERROR","event":"GATE-ERROR","gate":"commit-gate","error":"redacted-error"}
+{"ts":"2026-08-31T19:09:55.734Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T19:32:31.063Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T19:44:18.547Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T20:52:08.837Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T20:55:06.420Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T21:16:37.781Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-31T21:21:03.472Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-01T20:10:53.379Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-01T21:07:54.473Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-01T22:27:04.518Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-01T22:29:12.683Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-01T22:33:25.547Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-01T22:35:01.929Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-01T22:37:51.422Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-01T23:34:34.476Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-09-01T23:37:41.787Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T01:29:31.429Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-09-02T01:30:43.848Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-09-02T01:34:18.970Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T01:35:52.559Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T02:47:39.823Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T02:49:36.678Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T18:57:23.137Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T19:54:35.700Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T22:19:39.352Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T22:28:19.832Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T22:34:59.772Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T22:40:55.241Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-09-02T22:43:46.619Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-02T22:52:58.128Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T05:06:06.018Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T05:12:44.547Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T06:00:35.834Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T07:16:16.139Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T07:41:38.630Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T10:22:34.924Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T10:38:39.863Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T11:31:44.646Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T12:15:27.294Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T12:33:45.757Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T18:54:32.608Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T19:01:34.185Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T19:11:40.194Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=cd len=300>"}
+{"ts":"2026-09-03T19:37:29.904Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T19:47:21.684Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-03T20:36:09.365Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-06T23:53:50.662Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T01:22:54.753Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T01:45:09.100Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T02:48:12.458Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T03:14:53.428Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T03:21:56.786Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T03:31:09.332Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T03:56:10.316Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T05:23:23.222Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T05:26:45.187Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T05:33:24.136Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T05:35:02.122Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T05:38:11.999Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T05:40:44.629Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T06:06:15.731Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T07:03:44.439Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T07:04:25.440Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T07:06:42.305Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T09:33:45.219Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T09:35:29.604Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T09:37:13.657Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T10:35:26.459Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T11:55:09.208Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-09-07T12:00:45.473Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T12:07:15.039Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T12:11:34.514Z","outcome":"GATE-ERROR","event":"GATE-ERROR","gate":"commit-gate"}
+{"ts":"2026-09-07T12:11:40.083Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T12:36:23.838Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T12:39:38.304Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T12:44:16.435Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-09-07T12:48:11.367Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T20:57:45.958Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T22:48:34.309Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-07T22:50:00.258Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T10:44:39.246Z","outcome":"DENIED","event":"BLOCK","gate":"commit-gate"}
+{"ts":"2026-09-08T10:47:36.969Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=GATE_ADMIN len=300>"}
+{"ts":"2026-09-08T10:48:11.556Z","outcome":"BYPASSED","event":"BYPASS","gate":"commit-gate","command":"<command verb=git len=300>"}
+{"ts":"2026-09-08T20:42:51.601Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T20:52:02.528Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T21:11:10.319Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T21:56:03.393Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T21:57:49.705Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:06:20.503Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:16:59.634Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:25:37.936Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:39:30.109Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:42:21.692Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:43:47.276Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:46:49.329Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:51:33.380Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T22:52:17.184Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-09-08T23:17:21.385Z","outcome":"ALLOWED","event":"PASS","gate":"commit-gate"}
+{"ts":"2026-08-23T18:44:10.387Z","outcome":"OTHER","gate":"goal-tracker"}
+{"ts":"2026-08-23T18:44:10.473Z","outcome":"OTHER","gate":"goal-stop"}
+{"ts":"2026-08-23T18:44:10.557Z","outcome":"OTHER","gate":"goal-stop"}
+{"ts":"2026-08-23T18:44:10.628Z","outcome":"OTHER","gate":"goal-stop"}
+{"ts":"2026-08-23T18:44:10.707Z","outcome":"OTHER","gate":"goal-tracker"}
+{"ts":"2026-08-23T18:44:10.787Z","outcome":"OTHER","gate":"goal-stop"}
+{"ts":"2026-08-23T18:44:10.851Z","outcome":"OTHER","gate":"goal-tracker"}
+{"ts":"2026-08-23T18:44:10.928Z","outcome":"OTHER","gate":"goal-stop"}
+{"ts":"2026-08-23T18:44:10.990Z","outcome":"OTHER","gate":"goal-tracker"}
+{"ts":"2026-08-23T18:44:11.113Z","outcome":"OTHER","gate":"goal-tracker"}
+{"ts":"2026-08-23T19:59:45.231Z","outcome":"OTHER","gate":"goal-tracker"}
+{"ts":"2026-09-08T22:08:26.008Z","outcome":"OTHER","gate":"goal-tracker"}
+{"ts":"2026-08-23T18:40:52.670Z","outcome":"DENIED","rule":"drive-over-http","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T18:40:52.730Z","outcome":"DENIED","rule":"drive-over-http","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T18:40:52.788Z","outcome":"DENIED","rule":"gcloud-auth-login","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T18:40:52.845Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T18:40:52.906Z","outcome":"DENIED","rule":"new-token-file","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T18:40:52.963Z","outcome":"DENIED","rule":"drive-over-http","tool":"WebFetch","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T18:40:53.371Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T18:41:32.255Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:01:27.316Z","outcome":"DENIED","rule":"drive-over-http","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:02:11.444Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:02:12.391Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:02:42.963Z","outcome":"DENIED","rule":"gcloud-auth-login","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:02.600Z","outcome":"DENIED","rule":"drive-over-http","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:02.723Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:02.779Z","outcome":"DENIED","rule":"gcloud-auth-login","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:02.912Z","outcome":"DENIED","rule":"drive-over-http","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:02.973Z","outcome":"DENIED","rule":"drive-over-http","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:03.035Z","outcome":"DENIED","rule":"gcloud-auth-login","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:03.099Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:03.164Z","outcome":"DENIED","rule":"new-token-file","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:03.223Z","outcome":"DENIED","rule":"drive-over-http","tool":"WebFetch","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T19:03:03.625Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T20:53:54.600Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T16:50:23.078Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T16:50:58.323Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T16:51:24.908Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T16:51:38.705Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T17:50:07.926Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T17:50:27.308Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T17:50:51.199Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T17:51:36.648Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T17:51:45.348Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T18:02:45.487Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T18:08:46.048Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T18:20:34.620Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T19:04:06.087Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-28T19:09:33.101Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-31T18:14:30.758Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-31T18:14:38.209Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-31T18:14:53.719Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-31T18:15:14.829Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-08-31T18:17:26.638Z","outcome":"BYPASSED","tool":"Bash","decision":"bypass","gate":"pivot-tripwire"}
+{"ts":"2026-09-03T11:20:19.697Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-09-07T01:35:09.663Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-09-07T01:35:27.653Z","outcome":"DENIED","rule":"oauth-consent-flow","tool":"Bash","decision":"deny","gate":"pivot-tripwire"}
+{"ts":"2026-08-23T18:36:27.180Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:37:03.565Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:37:04.272Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:37:04.771Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:37:05.143Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:37:05.639Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:37:06.195Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:37:20.007Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:38:05.045Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T18:46:32.366Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T19:01:09.084Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T19:07:14.793Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T19:59:24.349Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T20:18:28.125Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T20:18:28.506Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T20:18:28.910Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T20:18:29.342Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-23T20:18:29.871Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-28T16:41:51.088Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-28T16:41:51.993Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-28T16:41:53.310Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-28T16:42:18.160Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-08-28T16:44:27.043Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-09-02T21:45:26.882Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-09-02T21:45:40.632Z","outcome":"OTHER","gate":"resume-context"}
+{"ts":"2026-09-03T03:41:22.514Z","outcome":"OTHER","gate":"resume-context"}

@@ -119,7 +119,7 @@ def _post(url, payload, headers, timeout):
 
 def call_claude(prompt: str, cfg: dict, timeout: int = 300) -> dict:
     """Through lean-claude (tier from config). Never an API key; flags the API-overflow lane."""
-    payload = {"prompt": prompt, "system": SYSTEM, "tier": cfg["tier_claude"], "effort": cfg["effort"],
+    payload = {"prompt": prompt, "system": SYSTEM, "tier": cfg["tier_claude"], "model": cfg.get("claude_model"), "effort": cfg["effort"],
                "job": "eval:judge", "promptId": "eval-judge@v1", "timeoutMs": timeout * 1000}
     t0 = time.time()
     try:

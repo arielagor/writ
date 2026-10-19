@@ -61,7 +61,8 @@ def main() -> int:
     spent = 0.0
     if os.path.exists(raw_path):
         for r in load_jsonl(raw_path):
-            if r.get("verdict"):
+            pin = cfg.get("pins", {}).get(r["family"])
+            if r.get("verdict") and (not pin or (r.get("returned_model") or "").startswith(pin)):
                 done.add((r["item_id"], r["family"], r["sample"]))
             spent += r.get("cost_usd") or 0.0
     cells = [(it, f, s) for it in items for f in fams for s in range(a.samples) if (it["item_id"], f, s) not in done]

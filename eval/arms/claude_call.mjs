@@ -13,7 +13,7 @@ for await (const c of process.stdin) raw += c;
 const a = JSON.parse(raw);
 try {
   const r = await runClaude(a.prompt, {
-    job: a.job || "eval:judge", promptId: a.promptId, tier: a.tier || "deep", effort: a.effort || "medium",
+    job: a.job || "eval:judge", promptId: a.promptId, tier: a.tier || "deep", model: a.model || undefined, effort: a.effort || "medium",
     systemPrompt: a.system, json: true, retries: 1, timeoutMs: a.timeoutMs || 240000,
   });
   process.stdout.write(JSON.stringify({

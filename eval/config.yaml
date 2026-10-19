@@ -14,11 +14,14 @@ judge:
   effort: medium            # applied where the API supports it (claude via lean-claude, gemini thinkingLevel, openai/xai reasoning.effort)
   max_output_tokens: 32768
   samples: 3
-  tier_claude: deep         # lean-claude tier; never a model id
+  tier_claude: deep         # lean-claude tier (documentation only once claude_model is set)
+  claude_model: claude-opus-5-5   # PINNED explicit id passed to lean-claude (opts.model); see PREREG.md
   gemini_model: gemini-4-argon
   gemini_fallback: gemini-3.1-pro-preview
-  openai_model: gpt-5.5
+  openai_model: gpt-5.5-2026-04-23   # snapshot of gpt-5.5, probed 2026-10-19
   xai_model: grok-4.5
+  # Pinned served ids (PREREG.md). A raw row counts only if its returned_model equals the pin or starts with it.
+  pins: {claude: claude-opus-5-5, gemini: gemini-4-argon, openai: gpt-5.5-2026-04-23, xai: grok-4.5}
   # xAI is blocked by default: needs Ariel's explicit approval (guard). run_judges.py refuses
   # family "xai" unless --allow-xai is passed.
 
@@ -31,10 +34,20 @@ prices:
     - {from: "2000-01-01", in: 2.0, out: 10.0}
     - {from: "2026-12-01", in: 4.0, out: 20.0}
   openai:
-    - {from: "2000-01-01", in: 5.0, out: 30.0, status: ASSUMED}
+    - {from: "2000-01-01", in: 5.0, out: 30.0, status: "VERIFIED 2026-10-19 at developers.openai.com/api/docs/pricing (gpt-5.5, standard, under 272K context)"}
   xai:
     - {from: "2000-01-01", in: 3.0, out: 15.0, status: ASSUMED}
   claude:
     - {from: "2000-01-01", in: 0.0, out: 0.0, note: "Max plan, $0 cash"}
 
 bootstrap: {resamples: 10000, seed: 20261101}
+
+# Batch runners (evallib/batch.py). discount = fraction of the standard price billed on the Batch API.
+#   gemini: 0.5 (memory reference_gemini_model_catalog.md). openai: gpt-5.5 batch $2.50/$15 verified 2026-10-19.
+#   xai: 0.5 is ASSUMED (no xAI call allowed before November); cost ticks in the results override it at download.
+# est_out_tokens and est_chars_per_token are a conservative bound for the USD cap check, not measurements.
+batch:
+  discount: {gemini: 0.5, openai: 0.5, xai: 0.5}
+  chunk_size: {gemini: 500, openai: 2000, xai: 1000}
+  est_chars_per_token: 3.0
+  est_out_tokens: 600   # the spec's per-call output figure; about 1.7x the largest observed (gemini smoke max 346, openai probe max 196)

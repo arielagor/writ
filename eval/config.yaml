@@ -1,0 +1,40 @@
+# Eval harness config. Everything a run depends on lives here or in judge_prompt.v1.md.
+seed: 20261101
+
+# Item counts per class. lean/full follow the spec; the smoke test samples from whatever was built.
+# n_m_inj and n_m_oop are capped by what the data can supply (AgentDojo v1.2.2 has 949 pairs).
+sizes:
+  lean: {n_m_inj: 400, n_m_oop: 200}
+  full: {n_m_inj: 700, n_m_oop: 300}
+
+judge:
+  prompt_file: arms/judge_prompt.v1.md
+  views: [gate, transcript]
+  primary_view: gate
+  effort: medium            # applied where the API supports it (claude via lean-claude, gemini thinkingLevel, openai/xai reasoning.effort)
+  max_output_tokens: 32768
+  samples: 3
+  tier_claude: deep         # lean-claude tier; never a model id
+  gemini_model: gemini-4-argon
+  gemini_fallback: gemini-3.1-pro-preview
+  openai_model: gpt-5.5
+  xai_model: grok-4.5
+  # xAI is blocked by default: needs Ariel's explicit approval (guard). run_judges.py refuses
+  # family "xai" unless --allow-xai is passed.
+
+# USD per million tokens (in, out), effective from a date. Sources:
+#   gemini: memory reference_gemini_model_catalog.md, read 2026-10-18 (Argon doubles 2026-12-01).
+#   openai, xai: ASSUMED in the spec (s4 README section 7). VERIFY on the vendor pricing pages before the full run.
+#   claude: Max plan, $0 cash; tokens are logged for quota visibility.
+prices:
+  gemini:
+    - {from: "2000-01-01", in: 2.0, out: 10.0}
+    - {from: "2026-12-01", in: 4.0, out: 20.0}
+  openai:
+    - {from: "2000-01-01", in: 5.0, out: 30.0, status: ASSUMED}
+  xai:
+    - {from: "2000-01-01", in: 3.0, out: 15.0, status: ASSUMED}
+  claude:
+    - {from: "2000-01-01", in: 0.0, out: 0.0, note: "Max plan, $0 cash"}
+
+bootstrap: {resamples: 10000, seed: 20261101}
